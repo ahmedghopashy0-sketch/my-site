@@ -3,188 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sayed Mahdy | English Teacher</title>
+<title>Security Alert</title>
 
 <style>
   body {
     margin: 0;
-    font-family: 'Poppins', Arial, sans-serif;
-    background: #f5f7fb;
-    color: #333;
-  }
-
-  header {
-    background: linear-gradient(135deg, #1e90ff, #00bcd4);
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  header h1 {
-    margin: 0;
-    font-size: 34px;
-  }
-
-  header p {
-    font-size: 18px;
-    opacity: 0.9;
-  }
-
-  .container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 30px 20px;
-  }
-
-  .profile {
+    background: black;
+    color: #00ff66;
+    font-family: monospace;
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    justify-content: center;
     align-items: center;
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  }
-
-  .profile img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #1e90ff;
-  }
-
-  .profile-info h2 {
-    margin: 0;
-    font-size: 28px;
-  }
-
-  .profile-info span {
-    color: #1e90ff;
-    font-weight: 600;
-  }
-
-  .section {
-    margin-top: 40px;
-  }
-
-  .section h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-
-  .courses {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-  }
-
-  .course {
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s;
-  }
-
-  .course:hover {
-    transform: translateY(-6px);
-  }
-
-  .course h4 {
-    margin-top: 0;
-    color: #1e90ff;
-  }
-
-  .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 30px;
-    background: #1e90ff;
-    color: white;
-    text-decoration: none;
-    border-radius: 40px;
-    font-weight: 600;
-    transition: 0.3s;
-  }
-
-  .btn:hover {
-    background: #0c70d4;
-  }
-
-  footer {
     text-align: center;
-    padding: 20px;
-    color: #777;
-    font-size: 14px;
   }
 
-  @media (max-width: 600px) {
-    .profile {
-      text-align: center;
-      justify-content: center;
-    }
+  .box {
+    width: 90%;
+    max-width: 420px;
+  }
+
+  .blink {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0.3; }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .frame {
+    margin: 20px auto;
+    width: 100%;
+    height: 220px;
+    border: 2px solid #00ff66;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #00ff66;
+    animation: scan 2s linear infinite;
+  }
+
+  @keyframes scan {
+    from { top: 0; }
+    to { top: 100%; }
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #00ff66;
+    color: black;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
   }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Sayed Mahdy</h1>
-  <p>English Teacher</p>
-</header>
+<div class="box">
 
-<div class="container">
+  <div id="step1">
+    <p class="blink">⚠️ Camera permission required</p>
+    <p>Tap to allow access</p>
+    <button onclick="start()">ALLOW</button>
+  </div>
 
-  <div class="profile">
-    <img src="https://via.placeholder.com/300" alt="Teacher Photo">
-    <div class="profile-info">
-      <h2>Sayed Mahdy</h2>
-      <p><span>Subject:</span> English Language</p>
-      <p>Professional English teacher helping students improve speaking, grammar, and confidence using modern teaching methods.</p>
+  <div id="step2" class="hidden">
+    <p>Camera access granted ✅</p>
+    <div class="frame">
+      <div class="scan"></div>
     </div>
-  </div>
-
-  <div class="section">
-    <h3>About the Teacher</h3>
-    <p>
-      Sayed Mahdy is an experienced English teacher who focuses on practical communication,
-      student confidence, and real-life English usage. His lessons are structured, simple,
-      and suitable for beginners to intermediate learners.
-    </p>
-  </div>
-
-  <div class="section">
-    <h3>Courses</h3>
-    <div class="courses">
-      <div class="course">
-        <h4>English from Scratch</h4>
-        <p>Start learning English step by step with simple explanations.</p>
-      </div>
-
-      <div class="course">
-        <h4>Speaking & Conversation</h4>
-        <p>Improve your pronunciation and speaking confidence.</p>
-      </div>
-
-      <div class="course">
-        <h4>Grammar Made Easy</h4>
-        <p>Understand grammar clearly with examples and practice.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section" style="text-align:center;">
-    <a href="#" class="btn">Enroll / Contact</a>
+    <p id="status">Initializing camera...</p>
   </div>
 
 </div>
 
-<footer>
-  © 2026 | Sayed Mahdy – English Teacher
-</footer>
+<script>
+function start() {
+  document.getElementById("step1").classList.add("hidden");
+  document.getElementById("step2").classList.remove("hidden");
+
+  // 📳 vibration after interaction
+  if (navigator.vibrate) {
+    navigator.vibrate([200, 100, 200]);
+  }
+
+  const status = document.getElementById("status");
+  const messages = [
+    "Adjusting focus...",
+    "Detecting face...",
+    "Capturing image...",
+    "Uploading frame...",
+    "Analyzing data..."
+  ];
+
+  let i = 0;
+  const interval = setInterval(() => {
+    status.textContent = messages[i % messages.length];
+    i++;
+
+    if (navigator.vibrate) navigator.vibrate(60);
+
+    if (i > 10) {
+      clearInterval(interval);
+      status.innerHTML = "<br>😌 Relax… it’s just a prank!";
+      if (navigator.vibrate) navigator.vibrate(500);
+    }
+  }, 700);
+}
+</script>
 
 </body>
 </html>
