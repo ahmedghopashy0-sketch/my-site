@@ -3,138 +3,188 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Love Trap 💖</title>
+<title>Sayed Mahdy | English Teacher</title>
 
 <style>
   body {
     margin: 0;
-    height: 100vh;
-    background: radial-gradient(circle at bottom, #FFE066, #FFD700);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Poppins', Arial, sans-serif;
-    overflow: hidden;
-  }
-
-  .card {
-    background: white;
-    padding: 40px 30px 60px;
-    border-radius: 30px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
-    text-align: center;
-    width: min(92%, 420px);
-    position: relative;
-  }
-
-  h1 {
-    font-size: 30px;
-    margin-bottom: 35px;
+    background: #f5f7fb;
     color: #333;
   }
 
-  .buttons {
-    position: relative;
+  header {
+    background: linear-gradient(135deg, #1e90ff, #00bcd4);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 34px;
+  }
+
+  header p {
+    font-size: 18px;
+    opacity: 0.9;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+  }
+
+  .profile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  .profile img {
+    width: 180px;
     height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #1e90ff;
   }
 
-  button {
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    user-select: none;
-    transition: transform 0.15s linear;
+  .profile-info h2 {
+    margin: 0;
+    font-size: 28px;
   }
 
-  #yesBtn {
-    font-size: 22px;
-    padding: 16px 36px;
-    background: #ff5fa2;
+  .profile-info span {
+    color: #1e90ff;
+    font-weight: 600;
+  }
+
+  .section {
+    margin-top: 40px;
+  }
+
+  .section h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  .course {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+  }
+
+  .course:hover {
+    transform: translateY(-6px);
+  }
+
+  .course h4 {
+    margin-top: 0;
+    color: #1e90ff;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background: #1e90ff;
     color: white;
-    box-shadow: 0 12px 25px rgba(255,95,162,0.5);
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: 0.3s;
   }
 
-  #yesBtn:hover {
-    transform: scale(1.1);
+  .btn:hover {
+    background: #0c70d4;
   }
 
-  #noBtn {
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
     font-size: 14px;
-    padding: 6px 14px; /* SMALL BUTTON 😈 */
-    background: #444;
-    color: white;
-    position: absolute;
-    right: 20px;
-    top: 90px;
   }
 
-  /* Wiggle animation */
-  @keyframes panic {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(10deg); }
-    50% { transform: rotate(-10deg); }
-    75% { transform: rotate(10deg); }
-    100% { transform: rotate(0deg); }
+  @media (max-width: 600px) {
+    .profile {
+      text-align: center;
+      justify-content: center;
+    }
   }
 </style>
 </head>
 
 <body>
 
-<div class="card">
-  <h1>Do you love me? 💖🥺</h1>
+<header>
+  <h1>Sayed Mahdy</h1>
+  <p>English Teacher</p>
+</header>
 
-  <div class="buttons">
-    <button id="yesBtn">Yes 😍</button>
-    <button id="noBtn">No 😐</button>
+<div class="container">
+
+  <div class="profile">
+    <img src="https://via.placeholder.com/300" alt="Teacher Photo">
+    <div class="profile-info">
+      <h2>Sayed Mahdy</h2>
+      <p><span>Subject:</span> English Language</p>
+      <p>Professional English teacher helping students improve speaking, grammar, and confidence using modern teaching methods.</p>
+    </div>
   </div>
+
+  <div class="section">
+    <h3>About the Teacher</h3>
+    <p>
+      Sayed Mahdy is an experienced English teacher who focuses on practical communication,
+      student confidence, and real-life English usage. His lessons are structured, simple,
+      and suitable for beginners to intermediate learners.
+    </p>
+  </div>
+
+  <div class="section">
+    <h3>Courses</h3>
+    <div class="courses">
+      <div class="course">
+        <h4>English from Scratch</h4>
+        <p>Start learning English step by step with simple explanations.</p>
+      </div>
+
+      <div class="course">
+        <h4>Speaking & Conversation</h4>
+        <p>Improve your pronunciation and speaking confidence.</p>
+      </div>
+
+      <div class="course">
+        <h4>Grammar Made Easy</h4>
+        <p>Understand grammar clearly with examples and practice.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="text-align:center;">
+    <a href="#" class="btn">Enroll / Contact</a>
+  </div>
+
 </div>
 
-<script>
-  const noBtn = document.getElementById("noBtn");
-  const card = document.querySelector(".card");
-
-  function escapeNo() {
-    const rect = card.getBoundingClientRect();
-
-    const maxX = rect.width - noBtn.offsetWidth - 20;
-    const maxY = rect.height - noBtn.offsetHeight - 40;
-
-    const x = Math.random() * maxX;
-    const y = Math.random() * maxY;
-
-    const colors = [
-      "red", "purple", "orange", "teal", "hotpink", "blue"
-    ];
-
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
-    noBtn.style.background =
-      colors[Math.floor(Math.random() * colors.length)];
-
-    noBtn.style.animation = "panic 0.3s infinite";
-    noBtn.style.transform = `rotate(${Math.random()*360}deg)`;
-
-    // 📳 Phone vibration (if supported)
-    if (navigator.vibrate) {
-      navigator.vibrate([40, 30, 40]);
-    }
-  }
-
-  // Desktop
-  noBtn.addEventListener("mouseenter", escapeNo);
-
-  // Mobile (runs BEFORE tap)
-  noBtn.addEventListener("touchstart", (e) => {
-    e.preventDefault();
-    escapeNo();
-  });
-
-  document.getElementById("yesBtn").addEventListener("click", () => {
-    alert("🥰 Of course you do! Love wins every time 💛🦆💖");
-  });
-</script>
+<footer>
+  © 2026 | Sayed Mahdy – English Teacher
+</footer>
 
 </body>
 </html>
-
